@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Arniya";
+  src: url("../public/fonts/Arniya-Regular.otf") format("opentype"),
+    url("../public/fonts/Arniya-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Runiga";
+  src: url("../public/fonts/Runiga.otf") format("opentype"),
+    url("../public/fonts/Runiga.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  /* Color utilities like bg-red-500, text-sky-300, and many more */
+  --color-pink-500: #ffccb7;
+  --color-red-500: #ff6b6b;
+  --color-yellow-500: #fcd792;
+  --color-olive-500: #828138;
+  --color-green-500: #3c5535;
+
+  /* Font family utilities like font-sans */
+  --font-runiga: "Runiga", sans-serif;
+  --font-arniya: "Arniya", sans-serif;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md text-white transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-md text-white transition-colors duration-200;
+    background-color: var(--color-red-500);
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 rounded-md text-white transition-colors duration-200;
+    background-color: var(--color-olive-500);
+  }
+}
+
+/* Utility Layer - Custom Background Colors */
+@layer utilities {
+  .bg-pink {
+    background-color: var(--color-pink-500);
+  }
+  .bg-red {
+    background-color: var(--color-red-500);
+  }
+  .bg-yellow {
+    background-color: var(--color-yellow-500);
+  }
+  .bg-olive {
+    background-color: var(--color-olive-500);
+  }
+  .bg-green {
+    background-color: var(--color-green-500);
+  }
+
+  .text-pink {
+    color: var(--color-pink-500);
+  }
+  .text-red {
+    color: var(--color-red-500);
+  }
+  .text-yellow {
+    color: var(--color-yellow-500);
+  }
+  .text-olive {
+    color: var(--color-olive-500);
+  }
+  .text-green {
+    color: var(--color-green-500);
+  }
+
+  .font-heading1 {
+    font-family: var(--font-heading1);
+  }
+  .font-heading2 {
+    font-family: var(--font-heading2);
+  }
+}
