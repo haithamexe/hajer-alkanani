@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="bg-green-500 border-3 border-b-1 rounded-2xl">
       <nav className="w-[100%] ">
-        <ul className="flex items-center p-4 gap-4 md:gap-8">
+        <ul className="flex items-center px-4 py-3 gap-4 md:gap-8">
           <li className="hover:text-green-100 text-md font-semibold md:text-xl">
             <Link to="#home">HOME</Link>
           </li>
