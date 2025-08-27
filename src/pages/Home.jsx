@@ -30,7 +30,7 @@
 //   }, [offset, headerHeight]);
 
 //   return (
-//     <div className="bg-green-500 w-[100%] ">
+//     <div className="bg-body w-[100%] ">
 //       <section className="flex relative">
 //         <motion.img
 //           src="/images/seth.png"
@@ -323,7 +323,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-green-500 w-full">
+    <div className="bg-body w-full">
       {/* Your existing hero section */}
       <section className="flex relative">
         <motion.img

@@ -24,10 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 @theme {
   /* Color utilities like bg-red-500, text-sky-300, and many more */
   --color-pink-500: #ffccb7;
@@ -35,7 +31,8 @@
   --color-yellow-500: #fcd792;
   --color-olive-500: #828138;
   --color-green-500: #3c5535;
-
+  --color-body: #ebd6f5;
+  --color-accent: black;
   /* Font family utilities like font-sans */
   --font-runiga: "Runiga", sans-serif;
   --font-arniya: "Arniya", sans-serif;
@@ -59,22 +56,8 @@
 
 /* Utility Layer - Custom Background Colors */
 @layer utilities {
-  .bg-pink {
-    background-color: var(--color-pink-500);
-  }
-  .bg-red {
-    background-color: var(--color-red-500);
-  }
-  .bg-yellow {
-    background-color: var(--color-yellow-500);
-  }
-  .bg-olive {
-    background-color: var(--color-olive-500);
-  }
-  .bg-green {
-    background-color: var(--color-green-500);
-  }
-
+ 
+/* 
   .text-pink {
     color: var(--color-pink-500);
   }
@@ -96,5 +79,5 @@
   }
   .font-heading2 {
     font-family: var(--font-heading2);
-  }
+  } */
 }
