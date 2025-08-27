@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @theme {
   /* Color utilities like bg-red-500, text-sky-300, and many more */
   --color-pink-500: #ffccb7;
