@@ -473,7 +473,7 @@ const Home = () => {
               initial="smallTextHidden"
               animate="smallTextVisible"
               exit="smallTextExit"
-              className="text-black font-bold text-[1rem] p-4 text-justify break-words hyphens-auto"
+              className="text-black font-bold text-[1rem] p-4 pt-1 text-justify break-words hyphens-auto"
             >
               I'm a certified Fitness Trainer with a strong academic background
               in Physiotherapy and Rehabilitation, and advanced studies in
@@ -505,7 +505,7 @@ const Home = () => {
               initial="smallTextHidden"
               animate="smallTextVisible"
               exit="smallTextExit"
-              className="text-black font-bold text-[1rem] p-4 text-justify break-words hyphens-auto"
+              className="text-black font-bold text-[1rem] p-4  pt-1 text-justify break-words hyphens-auto"
             >
               I'm a certified Fitness Trainer with a strong academic background
               in Physiotherapy and Rehabilitation, and advanced studies in
@@ -525,7 +525,7 @@ const Home = () => {
           >
             <motion.h1
               className="text-black text-lg px-2 py-1 border-1 block rounded-xl
-              w-30 font-bold font-arniya"
+              w-28 font-bold font-arniya"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, ease: "easeInOut", delay: 0.6 }}
@@ -537,7 +537,7 @@ const Home = () => {
               initial="smallTextHidden"
               animate="smallTextVisible"
               exit="smallTextExit"
-              className="text-black font-bold text-[1rem] p-4 text-justify break-words hyphens-auto"
+              className="text-black font-bold text-[1rem] p-4 pt-1 text-justify break-words hyphens-auto"
             >
               I'm a certified Fitness Trainer with a strong academic background
               in Physiotherapy and Rehabilitation, and advanced studies in
