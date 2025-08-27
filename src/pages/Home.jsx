@@ -280,10 +280,11 @@ const Home = () => {
   const [isSticky, setIsSticky] = useState(false);
   const sentinelRef = useRef(null);
   const stickyContainerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Adjust these values based on your header height and desired offset
   const headerHeight = 900;
-  const stickyOffset = 59;
+  const stickyOffset = isMobile ? 56 : 65;
 
   useEffect(() => {
     const sentinel = sentinelRef.current;
@@ -307,6 +308,19 @@ const Home = () => {
       observer.disconnect();
     };
   }, [headerHeight, stickyOffset]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Check on initial load
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="bg-green-500 w-full">
@@ -336,7 +350,7 @@ const Home = () => {
 
         <div className="w-[65%] md:w-[70%] lg:w-[77%] border-4 rounded-2xl p-4 border-y-1 border-r-1">
           <motion.h1
-            className="text-[3.2rem] leading-12 font-bold mb-4 font-arniya w-[20%] 
+            className="text-[3rem] leading-12 font-bold mb-4 font-arniya w-[20%] 
             md:text-[8rem] md:mb-6 md:leading-none
             lg:text-[11rem] lg:mb-8 lg:leading-none
             z-10 relative"
@@ -407,8 +421,8 @@ const Home = () => {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="text-black font-bold text-1xl font-runiga border-black
-              border-1 border-l-4 rounded-xl p-3 pl-4"
+            className="text-black font-bold text-md font-runiga border-black
+              border-1 border-l-4 rounded-xl p-3 pl-2"
           >
             This is a black
           </motion.p>
@@ -416,16 +430,16 @@ const Home = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.4 }}
-            className="text-black font-bold text-1xl font-runiga
-              border-1 border-r-4 rounded-xl p-3 pl-4 flex-1"
+            className="text-black font-bold text-md font-runiga
+              border-1 border-r-4 rounded-xl p-3 pl-2 flex-1"
           >
-            Another One here lol
+            Another One here
           </motion.p>
         </div>
       </section>
 
       {/* FIXED STICKY SECTION */}
-      <div className="relative">
+      <section className="relative">
         {/* Sentinel - invisible trigger element */}
         <div
           ref={sentinelRef}
@@ -436,7 +450,7 @@ const Home = () => {
         {/* Sticky Container */}
         <div
           ref={stickyContainerRef}
-          className="min-h-[200vh]" // Ensure enough height for scrolling
+          className="" // Ensure enough height for scrolling
         >
           {/* About Section */}
           <div
@@ -504,7 +518,7 @@ const Home = () => {
 
           {/* Experience Section */}
           <div
-            className={`bg-red-300 rounded-2xl border-4 border-y-1 mb-4 transition-all duration-300 ${
+            className={`bg-red-300 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset + 90}px` } : {}}
@@ -534,7 +548,25 @@ const Home = () => {
             </motion.p>
           </div>
         </div>
-      </div>
+      </section>
+      <section className="bg-blue-200 rounded-2xl border-4 border-y-1 p-4 h-[50vh]">
+        <h2>FAQ</h2>
+        <p>Here are some frequently asked questions:</p>
+        <ul>
+          <li>What services do you offer?</li>
+          <li>How can I book a session?</li>
+          <li>What should I expect during my first appointment?</li>
+        </ul>
+        <p>If you have any other questions, feel free to reach out!</p>
+      </section>
+      <section className="bg-blue-500 rounded-2xl border-4 border-y-1 p-4 h-[50vh]">
+        <h1>Contact</h1>
+        <p>If you'd like to get in touch, feel free to reach out!</p>
+        <ul>
+          <li>Email: example@example.com</li>
+          <li>Phone: (123) 456-7890</li>
+        </ul>
+      </section>
     </div>
   );
 };
