@@ -443,7 +443,7 @@ const Home = () => {
         <motion.img
           src="./images/star.png"
           alt="idk"
-          className="w-10 h-auto absolute"
+          className="w-7 h-auto absolute md:w-10"
           variants={motionVariants}
           initial={{
             opacity: 0,
@@ -621,7 +621,7 @@ const Home = () => {
         <motion.img
           src="./images/star.png"
           alt="idk"
-          className="w-10 h-auto absolute"
+          className="w-7 h-auto absolute md:w-10"
           variants={motionVariants}
           initial={{
             opacity: 0,
@@ -682,28 +682,38 @@ const Home = () => {
         ></motion.div>
       </section>
 
-      <section className="bg-blue-200 rounded-2xl h-[50vh]">
+      <section className=" rounded-2xl">
         <h2
-          className="text-black text-4xl px-2 py-1 border-1 block rounded-xl
-              w-full font-bold font-arniya"
+          className="text-black text-4xl px-2 py-1 border-4 border-b-0 block rounded-xl
+              w-full font-bold font-arniya bg-white"
         >
           FAQ
         </h2>
-        <p>Here are some frequently asked questions:</p>
-        <ul>
-          <li>What services do you offer?</li>
-          <li>How can I book a session?</li>
-          <li>What should I expect during my first appointment?</li>
+        <ul className=" flex flex-wrap">
+          <li className="bg-white w-1/2 p-2 border-1 border-l-4 rounded-xl h-40">
+            <h1 className="font-bold text-lg">What services do you offer?</h1>
+          </li>
+          <li className=" bg-white w-1/2 p-2 border-1 border-r-4 rounded-xl h-40">
+            <h1 className="font-bold text-lg">How can I book a session?</h1>
+          </li>
+          <li className="bg-white w-1/2 p-2 border-1 border-l-4 rounded-xl h-40">
+            <h1 className="font-bold text-lg">
+              What should I expect during my first appointment?
+            </h1>
+          </li>
+          <li className="bg-white  w-1/2 p-2 border-1 border-r-4 rounded-xl h-40">
+            <h1 className="font-bold text-lg">
+              What should I expect during my first appointment?
+            </h1>
+          </li>
         </ul>
-        <p>If you have any other questions, feel free to reach out!</p>
       </section>
-
       {/* {break section} */}
       <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
         <motion.img
           src="./images/star.png"
           alt="idk"
-          className="w-10 h-auto absolute"
+          className="w-7 h-auto absolute md:w-10"
           variants={motionVariants}
           initial={{
             opacity: 0,
