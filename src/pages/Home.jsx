@@ -348,7 +348,7 @@ const Home = () => {
           }}
         />
 
-        <div className="w-[65%] md:w-[70%] lg:w-[77%] border-4 rounded-2xl p-4 border-y-1 border-r-1">
+        <div className="w-[65%] md:w-[70%] lg:w-[77%] border-4 rounded-2xl p-4 border-y-4 border-r-1">
           <motion.h1
             className="text-[3rem] leading-12 font-bold mb-4 font-arniya w-[20%] 
             md:text-[8rem] md:mb-6 md:leading-none
@@ -372,7 +372,7 @@ const Home = () => {
           </motion.p>
         </div>
 
-        <div className="relative w-[35%] border-4 rounded-2xl border-l-1 md:h-100 lg:h-130 border-y-1 flex items-start md:w-[30%]">
+        <div className="relative w-[35%] border-4 rounded-2xl border-l-1 md:h-100 lg:h-130 border-y-4 flex items-start md:w-[30%]">
           <motion.img
             src="/images/star.png"
             alt="star"
@@ -415,7 +415,7 @@ const Home = () => {
       </section>
 
       {/* Your existing text section */}
-      <section>
+      {/* <section>
         <div className="w-full items-center flex overflow-hidden">
           <motion.p
             initial={{ opacity: 0, x: -10 }}
@@ -436,6 +436,72 @@ const Home = () => {
             Another One here
           </motion.p>
         </div>
+      </section> */}
+
+      {/* {break section} */}
+      <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+        <motion.img
+          src="./images/star.png"
+          alt="idk"
+          className="w-10 h-auto absolute"
+          variants={motionVariants}
+          initial={{
+            opacity: 0,
+            rotateY: 360,
+          }}
+          animate={{
+            opacity: 1,
+            rotateY: 0,
+          }}
+          transition={{
+            delay: 0,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute right-0 rotate-180"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute left-0"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.div
+          className="bg-accent h-0.5 w-full"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
       </section>
 
       {/* FIXED STICKY SECTION */}
@@ -454,7 +520,7 @@ const Home = () => {
         >
           {/* About Section */}
           <div
-            className={`bg-red-100 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
+            className={`bg-purple-300 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset}px` } : {}}
@@ -486,7 +552,7 @@ const Home = () => {
 
           {/* Education Section */}
           <div
-            className={`bg-red-200 rounded-2xl border-4 border-y-1 transition-all duration-300 ${
+            className={`bg-purple-400 rounded-2xl border-4 border-y-1 transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset + 45}px` } : {}}
@@ -518,7 +584,7 @@ const Home = () => {
 
           {/* Experience Section */}
           <div
-            className={`bg-red-300 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
+            className={`bg-purple-500 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset + 90}px` } : {}}
@@ -549,8 +615,80 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-blue-200 rounded-2xl border-4 border-y-1 p-4 h-[50vh]">
-        <h2>FAQ</h2>
+
+      {/* {break section} */}
+      <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+        <motion.img
+          src="./images/star.png"
+          alt="idk"
+          className="w-10 h-auto absolute"
+          variants={motionVariants}
+          initial={{
+            opacity: 0,
+            rotateY: 360,
+          }}
+          animate={{
+            opacity: 1,
+            rotateY: 0,
+          }}
+          transition={{
+            delay: 0,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute right-0 rotate-180"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute left-0"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.div
+          className="bg-accent h-0.5 w-full"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+      </section>
+
+      <section className="bg-blue-200 rounded-2xl h-[50vh]">
+        <h2
+          className="text-black text-4xl px-2 py-1 border-1 block rounded-xl
+              w-full font-bold font-arniya"
+        >
+          FAQ
+        </h2>
         <p>Here are some frequently asked questions:</p>
         <ul>
           <li>What services do you offer?</li>
@@ -559,6 +697,73 @@ const Home = () => {
         </ul>
         <p>If you have any other questions, feel free to reach out!</p>
       </section>
+
+      {/* {break section} */}
+      <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+        <motion.img
+          src="./images/star.png"
+          alt="idk"
+          className="w-10 h-auto absolute"
+          variants={motionVariants}
+          initial={{
+            opacity: 0,
+            rotateY: 360,
+          }}
+          animate={{
+            opacity: 1,
+            rotateY: 0,
+          }}
+          transition={{
+            delay: 0,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute right-0 rotate-180"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute left-0"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.div
+          className="bg-accent h-0.5 w-full"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+      </section>
+
       <section className="bg-blue-500 rounded-2xl border-4 border-y-1 p-4 h-[50vh]">
         <h1>Contact</h1>
         <p>If you'd like to get in touch, feel free to reach out!</p>
