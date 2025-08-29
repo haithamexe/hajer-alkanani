@@ -807,7 +807,7 @@ const Home = () => {
                         : "border-r-4 bg-accent"
                     } rounded-xl transition-shadow duration-300 `}
                   >
-                    <div className="flex flex-col justify-between items-center h-[100%]">
+                    <div className="flex flex-col justify-between  h-[100%]">
                       <h1 className="font-bold text-[1rem] text-gray-800">
                         {faq.question}
                       </h1>
@@ -833,11 +833,11 @@ const Home = () => {
                   {/* Back of card */}
                   <div
                     className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br border-1 border-accent ${
-                      index % 3 === 0 ? "bg-purple-300  " : "bg-purple-700 "
-                    } p-4 rounded-xl  text-white flex items-center justify-center`}
+                      index % 3 === 0 ? "bg-purple-200  " : "bg-purple-300 "
+                    } p-4 rounded-xl  text-accent flex items-center justify-center`}
                   >
-                    <div className="text-center">
-                      <p className="text-sm leading-relaxed">{faq.answer}</p>
+                    <div className="">
+                      <p className="text-[1rem] leading-4.5">{faq.answer}</p>
                     </div>
                   </div>
                 </div>
@@ -939,6 +939,185 @@ const Home = () => {
           <li>Phone: (123) 456-7890</li>
         </ul>
       </section>
+
+      {/* { weird break section} */}
+      {/* <section className="h-30 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+        <motion.img
+          src="./images/star.png"
+          alt="idk"
+          className="w-25 h-auto absolute md:w-10"
+          variants={motionVariants}
+          initial={{
+            opacity: 0,
+            rotateY: 360,
+          }}
+          animate={{
+            opacity: 1,
+            rotateY: 0,
+          }}
+          transition={{
+            delay: 0,
+            duration: 0.5,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute right-0 rotate-180"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute left-0"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute right-0 top-22 rotate-[198deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute left-0 top-22 rotate-[-19deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute left-0 bottom-22 rotate-[19deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.img
+          src="./images/tear.png"
+          alt="idk"
+          className="w-10 h-auto absolute right-0 bottom-22 rotate-[-198deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.7,
+            duration: 0.1,
+          }}
+        />
+        <motion.div
+          className="bg-accent absolute h-0.5 w-1/2 top-20 right-0 rotate-[15deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+        <motion.div
+          className="bg-accent absolute h-0.5 w-1/2 bottom-20 right-0 rotate-[-15deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+        <motion.div
+          className="bg-accent absolute h-0.5 w-1/2 bottom-20 left-0 rotate-[15deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+        <motion.div
+          className="bg-accent absolute h-0.5 w-1/2 top-20 left-0 rotate-[-15deg]"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+        <motion.div
+          className="bg-accent h-0.5 w-full"
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            delay: 0.8,
+            duration: 0.5,
+          }}
+        ></motion.div>
+      </section> */}
     </div>
   );
 };
