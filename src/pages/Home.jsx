@@ -347,7 +347,7 @@ const Home = () => {
       id: 4,
       question: "Are there any special packages available?",
       answer:
-        "Yes! We offer various wellness packages including monthly memberships, couple's treatments, and seasonal specials. Contact us to learn about current promotions and discounts.",
+        "Yes! We offer various wellness pasjhd h kjashd kjahskj ahskj hh jkashd kjahs kjh jhaskjd haksd ackages including monthly memberships, couple's treatments, and seasonal specials. Contact us to learn about current promotions and discounts.",
     },
   ];
 
@@ -389,9 +389,9 @@ const Home = () => {
 
         <div className="w-[65%] md:w-[70%] lg:w-[77%] border-4 rounded-2xl p-4 border-y-4 border-r-1">
           <motion.h1
-            className="text-[3rem] leading-12 font-bold mb-4 font-arniya w-[20%] 
-            md:text-[8rem] md:mb-6 md:leading-none
-            lg:text-[11rem] lg:mb-8 lg:leading-none
+            className="text-[13vw] leading-[13vw] font-bold mb-2 font-arniya w-[20%] 
+            md:text-[8rem] md:mb-2 md:leading-none
+            lg:text-[11rem]  lg:leading-none
             z-10 relative"
             variants={motionVariants}
             initial="headingHidden"
@@ -401,7 +401,7 @@ const Home = () => {
             Hajer Alkanani
           </motion.h1>
           <motion.p
-            className="text-xl w-full"
+            className="text-md w-[95%] md:text-2xl"
             variants={motionVariants}
             initial="smallTextHidden"
             animate="smallTextVisible"
@@ -559,7 +559,7 @@ const Home = () => {
         >
           {/* About Section */}
           <div
-            className={`bg-purple-300 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
+            className={`bg-purple-200 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset}px` } : {}}
@@ -591,7 +591,7 @@ const Home = () => {
 
           {/* Education Section */}
           <div
-            className={`bg-purple-400 rounded-2xl border-4 border-y-1 transition-all duration-300 ${
+            className={`bg-purple-300 rounded-2xl border-4 border-y-1 transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset + 45}px` } : {}}
@@ -623,7 +623,7 @@ const Home = () => {
 
           {/* Experience Section */}
           <div
-            className={`bg-purple-500 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
+            className={`bg-purple-400 rounded-2xl border-4 border-y-1  transition-all duration-300 ${
               isSticky ? "sticky" : "relative"
             }`}
             style={isSticky ? { top: `${stickyOffset + 90}px` } : {}}
@@ -808,10 +808,10 @@ const Home = () => {
                     } rounded-xl transition-shadow duration-300 `}
                   >
                     <div className="flex flex-col justify-between  h-[100%]">
-                      <h1 className="font-bold text-[1rem] text-gray-800">
+                      <h1 className="font-bold text-[1rem] text-gray-800 md:text-3xl">
                         {faq.question}
                       </h1>
-                      <div className="text-[0.7rem] text-gray-500 flex items-center justify-center gap-1  ">
+                      <div className="text-[0.7rem] text-gray-500 flex items-center justify-center gap-1 md:text-lg ">
                         <span>Click to reveal answer</span>
                         <svg
                           className="w-3 h-3 animate-bounce"
@@ -834,10 +834,12 @@ const Home = () => {
                   <div
                     className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br border-1 border-accent ${
                       index % 3 === 0 ? "bg-purple-200  " : "bg-purple-300 "
-                    } p-4 rounded-xl  text-accent flex items-center justify-center`}
+                    } p-4 rounded-xl  text-accent flex justify-center overflow-auto`}
                   >
                     <div className="">
-                      <p className="text-[1rem] leading-4.5">{faq.answer}</p>
+                      <p className="text-[1rem] leading-4.5 md:text-2xl md:leading-7.5">
+                        {faq.answer}
+                      </p>
                     </div>
                   </div>
                 </div>
