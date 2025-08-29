@@ -322,6 +322,45 @@ const Home = () => {
     };
   }, []);
 
+  const [flippedCards, setFlippedCards] = useState(new Set());
+
+  const faqData = [
+    {
+      id: 1,
+      question: "What services do you offer?",
+      answer:
+        "We provide comprehensive wellness services including massage therapy, aromatherapy, reflexology, and holistic healing treatments tailored to your individual needs.",
+    },
+    {
+      id: 2,
+      question: "How can I book a session?",
+      answer:
+        "You can easily book a session through our online booking system, call us directly, or visit our location. We offer flexible scheduling to accommodate your busy lifestyle.",
+    },
+    {
+      id: 3,
+      question: "What should I expect during my first appointment?",
+      answer:
+        "Your first visit includes a consultation to understand your needs, a brief health assessment, and a customized treatment plan designed specifically for your wellness goals.",
+    },
+    {
+      id: 4,
+      question: "Are there any special packages available?",
+      answer:
+        "Yes! We offer various wellness packages including monthly memberships, couple's treatments, and seasonal specials. Contact us to learn about current promotions and discounts.",
+    },
+  ];
+
+  const toggleFlip = (cardId) => {
+    const newFlippedCards = new Set(flippedCards);
+    if (newFlippedCards.has(cardId)) {
+      newFlippedCards.delete(cardId);
+    } else {
+      newFlippedCards.add(cardId);
+    }
+    setFlippedCards(newFlippedCards);
+  };
+
   return (
     <div className="bg-body w-full">
       {/* Your existing hero section */}
@@ -682,18 +721,28 @@ const Home = () => {
         ></motion.div>
       </section>
 
-      <section className=" rounded-2xl">
+      {/* <section className=" rounded-2xl">
         <h2
           className="text-black text-4xl px-2 py-1 border-4 border-b-0 block rounded-xl
               w-full font-bold font-arniya bg-white"
         >
           FAQ
         </h2>
-        <ul className=" flex flex-wrap">
+        <ul className=" flex flex-wrap justify-center items-center relative">
+          <img
+            src="/images/star.png"
+            alt="Star"
+            className="w-7 h-auto absolute z-10"
+          />
+          <img
+            src="/images/star.png"
+            alt="Star"
+            className="w-7 h-auto absolute z-10 top-[-14px]"
+          />
           <li className="bg-white w-1/2 p-2 border-1 border-l-4 rounded-xl h-40">
             <h1 className="font-bold text-lg">What services do you offer?</h1>
           </li>
-          <li className=" bg-white w-1/2 p-2 border-1 border-r-4 rounded-xl h-40">
+          <li className="bg-white w-1/2 p-2 border-1 border-r-4 rounded-xl h-40">
             <h1 className="font-bold text-lg">How can I book a session?</h1>
           </li>
           <li className="bg-white w-1/2 p-2 border-1 border-l-4 rounded-xl h-40">
@@ -706,8 +755,116 @@ const Home = () => {
               What should I expect during my first appointment?
             </h1>
           </li>
+
+          {faqData.map((item) => (
+            <li
+              key={item.id}
+              className="bg-white w-1/2 p-2 border-1 border-l-4 rounded-xl h-40 "
+            >
+              <h1 className="font-bold text-lg">{item.question}</h1>
+              <p className="mt-2">{item.answer}</p>
+            </li>
+          ))}
+        </ul>
+      </section> */}
+
+      <section className="">
+        <h2
+          className="text-black text-4xl px-2 py-1 border-4 border-b-0 block rounded-xl
+              w-full font-bold font-arniya bg-white"
+        >
+          FAQ
+        </h2>
+
+        <ul className="flex flex-wrap justify-center items-center relative ">
+          {/* Decorative stars */}
+          <img
+            src="/images/star.png"
+            alt="Star"
+            className="w-7 h-auto absolute z-10"
+          />
+          <img
+            src="/images/star.png"
+            alt="Star"
+            className="w-7 h-auto absolute z-10 top-[-14px]"
+          />
+          {faqData.map((faq, index) => (
+            <li key={faq.id} className="w-1/2 h-70">
+              <div
+                className="relative w-full h-full cursor-pointer group perspective-1000"
+                onClick={() => toggleFlip(faq.id)}
+              >
+                <div
+                  className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
+                    flippedCards.has(faq.id) ? "rotate-y-180" : ""
+                  }`}
+                >
+                  {/* Front of card */}
+                  <div
+                    className={`absolute  w-full h-full backface-hidden bg-white p-4 border-1 ${
+                      index % 2 === 0
+                        ? "border-l-4 bg-accent"
+                        : "border-r-4 bg-accent"
+                    } rounded-xl transition-shadow duration-300 `}
+                  >
+                    <div className="flex flex-col justify-between items-center h-[100%]">
+                      <h1 className="font-bold text-[1rem] text-gray-800">
+                        {faq.question}
+                      </h1>
+                      <div className="text-[0.7rem] text-gray-500 flex items-center justify-center gap-1  ">
+                        <span>Click to reveal answer</span>
+                        <svg
+                          className="w-3 h-3 animate-bounce"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Back of card */}
+                  <div
+                    className={`absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-gradient-to-br border-1 border-accent ${
+                      index % 3 === 0 ? "bg-purple-300  " : "bg-purple-700 "
+                    } p-4 rounded-xl  text-white flex items-center justify-center`}
+                  >
+                    <div className="text-center">
+                      <p className="text-sm leading-relaxed">{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 bg-gradient-to-r from-purple-400 to-pink-400 pointer-events-none"></div>
+              </div>
+            </li>
+          ))}
         </ul>
       </section>
+
+      <style jsx>{`
+        .perspective-1000 {
+          perspective: 3000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
+
       {/* {break section} */}
       <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
         <motion.img
