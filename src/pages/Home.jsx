@@ -364,7 +364,7 @@ const Home = () => {
   return (
     <div className="bg-body w-full">
       {/* Your existing hero section */}
-      <section className="flex relative">
+      <section className="flex relative scroll-m-20" id="home">
         <motion.img
           src="/images/seth.png"
           alt="star"
@@ -478,7 +478,7 @@ const Home = () => {
       </section> */}
 
       {/* {break section} */}
-      <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+      <section className="h-15 md:h-25 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
         <motion.img
           src="./images/star.png"
           alt="idk"
@@ -544,7 +544,7 @@ const Home = () => {
       </section>
 
       {/* FIXED STICKY SECTION */}
-      <section className="relative">
+      <section className="relative " id="about">
         {/* Sentinel - invisible trigger element */}
         <div
           ref={sentinelRef}
@@ -578,7 +578,7 @@ const Home = () => {
               initial="smallTextHidden"
               animate="smallTextVisible"
               exit="smallTextExit"
-              className="text-black font-bold text-[1rem] p-4 pt-1 text-justify break-words hyphens-auto"
+              className="text-black text-[1.2rem] p-4 pt-1"
             >
               I'm a certified Fitness Trainer with a strong academic background
               in Physiotherapy and Rehabilitation, and advanced studies in
@@ -610,7 +610,7 @@ const Home = () => {
               initial="smallTextHidden"
               animate="smallTextVisible"
               exit="smallTextExit"
-              className="text-black font-bold text-[1rem] p-4  pt-1 text-justify break-words hyphens-auto"
+              className="text-black text-[1.2rem] p-4 pt-1"
             >
               I'm a certified Fitness Trainer with a strong academic background
               in Physiotherapy and Rehabilitation, and advanced studies in
@@ -642,7 +642,7 @@ const Home = () => {
               initial="smallTextHidden"
               animate="smallTextVisible"
               exit="smallTextExit"
-              className="text-black font-bold text-[1rem] p-4 pt-1 text-justify break-words hyphens-auto"
+              className="text-black text-[1.2rem] p-4 pt-1"
             >
               I'm a certified Fitness Trainer with a strong academic background
               in Physiotherapy and Rehabilitation, and advanced studies in
@@ -656,7 +656,7 @@ const Home = () => {
       </section>
 
       {/* {break section} */}
-      <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+      <section className="h-15 md:h-25 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
         <motion.img
           src="./images/star.png"
           alt="idk"
@@ -720,7 +720,6 @@ const Home = () => {
           }}
         ></motion.div>
       </section>
-
       {/* <section className=" rounded-2xl">
         <h2
           className="text-black text-4xl px-2 py-1 border-4 border-b-0 block rounded-xl
@@ -768,7 +767,7 @@ const Home = () => {
         </ul>
       </section> */}
 
-      <section className="">
+      <section className=" scroll-m-14 md:scroll-m-16" id="faq">
         <h2
           className="text-black text-4xl px-2 py-1 border-4 border-b-0 block rounded-xl
               w-full font-bold font-arniya bg-white"
@@ -868,7 +867,7 @@ const Home = () => {
       `}</style>
 
       {/* {break section} */}
-      <section className="h-15 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
+      <section className="h-15 md:h-25 relative rounded-xl flex overflow-hidden flex-col justify-center items-center">
         <motion.img
           src="./images/star.png"
           alt="idk"
@@ -933,7 +932,10 @@ const Home = () => {
         ></motion.div>
       </section>
 
-      <section className="bg-blue-500 rounded-2xl border-4 border-y-1 p-4 h-[50vh]">
+      <section
+        className="bg-white rounded-2xl border-4 border-y-1 p-4 h-[50vh]"
+        id="contact"
+      >
         <h1>Contact</h1>
         <p>If you'd like to get in touch, feel free to reach out!</p>
         <ul>
